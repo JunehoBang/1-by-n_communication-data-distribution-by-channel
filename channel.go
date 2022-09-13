@@ -4,15 +4,10 @@ import (
 	"fmt"
 	"math/rand"
 	"time"
-	// "os"
-	// "os/signal"
-	// "syscall"
 )
 
 func worker(id int, done chan bool) {
-	// sig := <-sigs
-	// fmt.Println()
-	// fmt.Println(sig)
+
 	for {
 		<-done
 		fmt.Println(id)
@@ -21,10 +16,6 @@ func worker(id int, done chan bool) {
 }
 
 func main() {
-
-	// sigs := make(chan os.Signal, 1)
-
-	// signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
 
 	done := make(chan bool)
 
